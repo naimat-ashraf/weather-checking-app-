@@ -1,0 +1,257 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.weather-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+  color: #fff;
+}
+
+/* Input styling remains the same */
+input {
+  padding: 12px 15px;
+  width: 90%;
+  border-radius: 50px;
+  border: none;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: #444;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px #00f2fe;
+}
+
+.weather-result {
+  margin-top: 20px;
+}
+
+.weather-result img {
+  width: 100px;
+  height: 100px;
+  animation: float 3s infinite ease-in-out;
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #0d136e; /* Dark background */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.5s ease;
+}
+
+.weather-container {
+  background: rgba(255, 255, 255, 0.15); /* Light semi-transparent box */
+  backdrop-filter: blur(20px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+  color: #fff;
+}
+
+input {
+  padding: 12px 15px;
+  width: 90%;
+  border-radius: 50px;
+  border: none;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #000; /* Dark text inside input for contrast */
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: #444;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px #00f2fe;
+}
+
+.weather-result {
+  margin-top: 20px;
+}
+
+.weather-result img {
+  width: 100px;
+  height: 100px;
+  animation: float 3s infinite ease-in-out;
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 18px;
+}/**
+
+/* Background colors for weather conditions */
+.sunny {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cloudy {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.rainy {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+/* Floating clouds */
+.cloud {
+  position: absolute;
+  top: 20%;
+  width: 150px;
+  height: 80px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  animation: moveClouds 30s linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: rgba(255,255,255,0.8);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  top: -30px;
+  left: 10px;
+}
+.cloud::after {
+  top: -20px;
+  right: 10px;
+}
+
+@keyframes moveClouds {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(100vw); }
+}
+
+/* Rain effect */
+.rain-drop {
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background: #00f2fe;
+  top: -20px;
+  animation: fall 1s linear infinite;
+}
+
+@keyframes fall {
+  0% { top: -20px; opacity: 1; }
+  100% { top: 120%; opacity: 0; }
+}
+
+/* Sun rays */
+.sun {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #f8d44f 0%, #f9a825 70%);
+  border-radius: 50%;
+  animation: rotateSun 10s linear infinite;
+}
+
+@keyframes rotateSun {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+button {
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
